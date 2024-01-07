@@ -8,16 +8,13 @@ const exec = require('child_process').exec;
  */
 
 module.exports = {
-  // TODO: migrate them to v4
-  // lifecycles: {
-  //   async afterCreate(entry) {
-  //     exec('ts /home/ice/gatsby-build.sh')
-  //   },
-  //   async afterUpdate(result, params, entry) {
-  //     exec('ts /home/ice/gatsby-build.sh')
-  //   },
-  //   async afterDelete(result, params) {
-  //     exec('ts /home/ice/gatsby-build.sh')
-  //   },
-  // }
+  async afterCreate(entry) {
+    exec('ts /home/ice/gatsby-build.sh')
+  },
+  async afterUpdate(result, params, entry) {
+    exec('ts /home/ice/gatsby-build.sh')
+  },
+  async afterDelete(result, params) {
+    exec('ts /home/ice/gatsby-build.sh')
+  },
 };
